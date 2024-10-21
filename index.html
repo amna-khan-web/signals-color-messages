@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signals!</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="box">
+        <h1>Signals Color Message App!</h1>
+        <label>Enter Signal color:</label>
+        <br>
+        <input type="text" placeholder="red_/ yellow_/ green" id="color">
+        <br><br>
+
+        <button onclick="input()">Generate Message!</button>
+
+        <p id="show"></p>
+    </div>
+
+    <!-- JS functionality start -->
+
+    <script>
+    function input() {
+        
+    
+let signalColor = document.getElementById("color").value;
+
+// Display message based on signal color
+if (signalColor === "red") {
+    document.getElementById("show").innerHTML = ("❌Stop! Wait until the signal turns green.");
+} else if (signalColor === "yellow") {
+    document.getElementById("show").innerHTML = ("🚧Get ready to move.");
+} else if (signalColor === "green") {
+    document.getElementById("show").innerHTML = ("🏃🏻‍♂️Go! You can proceed.");
+} else {
+    document.getElementById("show").innerHTML = ("🚦Invalid color! Please enter Red, Yellow, or Green.");
+}
+ }
+    </script>
+</body>
+
+</html>
